@@ -1,0 +1,13 @@
+# Traverse melalui 1 ke len(arr)
+for i in range(1, len(arr)):
+
+key = arr[i]
+
+# Pindahkan elemen arr[0..i-1], yaitu
+# lebih besar dari kunci, untuk satu posisi di depan
+# dari posisi mereka saat ini
+j = i-1
+while j >=0 and key < arr[j] :
+arr[j+1] = arr[j]
+j -= 1
+arr[j+1] = key
